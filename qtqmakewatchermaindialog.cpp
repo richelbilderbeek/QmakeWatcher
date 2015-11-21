@@ -87,10 +87,10 @@ void ribi::QtQmakeWatcherMainDialog::OnQmake() noexcept
     assert(!has_error);
     if (has_error) throw std::runtime_error("'qmake tmp.pro' failed");
   }
+  bool has_diff = true;
   {
     const bool has_error = std::system("diff Makefile oldmake > tmp.txt");
-    assert(!has_error);
-    if (has_error) throw std::runtime_error("'diff Makefile oldmake > tmp.txt' failed");
+    if (has_error) has_diff = false;
   }
   //Display Makefile
   {
@@ -102,6 +102,8 @@ void ribi::QtQmakeWatcherMainDialog::OnQmake() noexcept
     }
   }
   //Display diff
+  ui->edit_diff->setPlainText("No diff");
+  if (has_diff)
   {
     ui->edit_diff->clear();
     const std::vector<std::string> v(ribi::fileio::FileIo().FileToVector("tmp.txt"));

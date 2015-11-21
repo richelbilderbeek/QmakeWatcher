@@ -50,7 +50,7 @@ ribi::About ribi::QmakeWatcherMenuDialog::GetAbout() const noexcept
     "Richel Bilderbeek",
     "QmakeWatcher",
     "tool to watch qmake's .pro to Makefile conversion",
-    "the 20th of September 2013",
+    "November 21st of 2015",
     "2010-2015",
     "http://www.richelbilderbeek.nl/ToolQmakeWatcher.htm",
     GetVersion(),
@@ -75,25 +75,17 @@ ribi::Help ribi::QmakeWatcherMenuDialog::GetHelp() const noexcept
   );
 }
 
-boost::shared_ptr<const ribi::Program> ribi::QmakeWatcherMenuDialog::GetProgram() const noexcept
-{
-  const boost::shared_ptr<const Program> p {
-    new ProgramQmakeWatcher
-  };
-  assert(p);
-  return p;
-}
-
 std::string ribi::QmakeWatcherMenuDialog::GetVersion() const noexcept
 {
-  return "1.0";
+  return "2.0";
 }
 
 std::vector<std::string> ribi::QmakeWatcherMenuDialog::GetVersionHistory() const noexcept
 {
   return {
-    "2013-09-20: version 1.0: initial version, conformized for ProjectRichelBilderbeek"
-    "2013-11-04: version 1.1: conformized for ProjectRichelBilderbeekConsole"
+    "2013-09-20: version 1.0: initial version, conformized for ProjectRichelBilderbeek",
+    "2013-11-04: version 1.1: conformized for ProjectRichelBilderbeekConsole",
+    "2015-11-21: version 2.0: moved to own GitHub",
   };
 }
 

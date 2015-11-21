@@ -42,18 +42,16 @@
          <enum>Qt::ScrollBarAlwaysOn</enum>
         </property>
         <property name="plainText">
-         <string>#-------------------------------------------------
-#
-# Project created by QtCreator 2010-10-09T14:53:26
-#
-#-------------------------------------------------
-QT       += core gui
-TARGET = ToolQmakeWatcher
+         <string>QT       += core gui
 TEMPLATE = app
-SOURCES += main.cpp\
-        dialogmain.cpp
-HEADERS  += dialogmain.h
-FORMS    += dialogmain.ui</string>
+
+SOURCES += \
+  main.cpp \
+  qmakewatchermenudialog.cpp
+
+HEADERS  += qmakewatchermenudialog.h
+
+FORMS    += qmakewatchermenudialog.ui</string>
         </property>
         <property name="overwriteMode">
          <bool>false</bool>
