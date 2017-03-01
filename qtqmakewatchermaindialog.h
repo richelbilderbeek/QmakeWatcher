@@ -48,9 +48,6 @@ public:
 private:
   Ui::QtQmakeWatcherMainDialog *ui;
 
-  #ifndef NDEBUG
-  static void Test() noexcept;
-  #endif
 
 private slots:
   void OnQmake() noexcept;
