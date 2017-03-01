@@ -1,4 +1,3 @@
-include(../RibiLibraries/DesktopApplication.pri)
 include(../RibiClasses/CppAbout/CppAbout.pri)
 include(../RibiClasses/CppFileIo/CppFileIo.pri)
 include(../RibiClasses/CppHelp/CppHelp.pri)
