@@ -14,7 +14,7 @@ namespace ribi {
 
 class QtQmakeWatcherMenuDialog : public QtHideAndShowDialog
 {
-  Q_OBJECT
+  Q_OBJECT //!OCLINT
 
 public:
   explicit QtQmakeWatcherMenuDialog(QWidget *parent = 0) noexcept;
