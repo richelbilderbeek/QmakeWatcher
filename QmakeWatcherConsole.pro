@@ -7,12 +7,8 @@ include(../RibiClasses/CppMenuDialog/CppMenuDialog.pri)
 include(QmakeWatcherConsole.pri)
 SOURCES += main.cpp
 
-# C++14
-CONFIG += c++14
-QMAKE_CXXFLAGS += -std=c++14
-
 # High warning levels
-QMAKE_CXXFLAGS += -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Weffc++ -Werror
+QMAKE_CXXFLAGS += -Wall -Wextra -Wshadow -Wnon-virtual-dtor -pedantic -Werror
 
 # Debug and release mode
 CONFIG += debug_and_release
@@ -59,11 +55,3 @@ QMAKE_CXXFLAGS += -Wno-unused-variable
 #   BOOST_DEFINE_MATH_CONSTANT(half, 5.000000000000000000000000000000000000e-01, "5.00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000e-01")
 #   ^
 QMAKE_CXXFLAGS += -fext-numeric-literals
-
-message(Host name: $$QMAKE_HOST.name)
-contains(QMAKE_HOST.name,pc-157-103) {
-  message("Host is university computer in the canteen")
-  QMAKE_CXX = g++-5
-  QMAKE_LINK = g++-5
-  QMAKE_CC = gcc-5
-}
