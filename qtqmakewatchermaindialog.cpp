@@ -1,6 +1,3 @@
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
-#pragma GCC diagnostic ignored "-Wunused-local-typedefs"
 #include "qtqmakewatchermaindialog.h"
 
 #include <cassert>
@@ -15,7 +12,6 @@
 
 #include "fileio.h"
 #include "ui_qtqmakewatchermaindialog.h"
-#pragma GCC diagnostic pop
 
 ribi::QtQmakeWatcherMainDialog::QtQmakeWatcherMainDialog(QWidget *parent)
   : QtHideAndShowDialog(parent),
@@ -43,7 +39,7 @@ ribi::QtQmakeWatcherMainDialog::~QtQmakeWatcherMainDialog() noexcept
   delete ui;
 }
 
-void ribi::QtQmakeWatcherMainDialog::OnQmake() noexcept
+void ribi::QtQmakeWatcherMainDialog::OnQmake()
 {
   //Save text to file
   {

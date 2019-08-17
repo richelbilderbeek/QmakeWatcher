@@ -1,5 +1,3 @@
-#pragma GCC diagnostic push
-#pragma GCC diagnostic ignored "-Weffc++"
 #include "qtqmakewatchermenudialog.h"
 
 #include <QDesktopWidget>
@@ -10,7 +8,6 @@
 #include "qtqmakewatchermaindialog.h"
 #include "qthideandshowdialog.h"
 #include "ui_qtqmakewatchermenudialog.h"
-#pragma GCC diagnostic pop
 
 ribi::QtQmakeWatcherMenuDialog::QtQmakeWatcherMenuDialog(QWidget *parent) noexcept :
     QtHideAndShowDialog(parent),
