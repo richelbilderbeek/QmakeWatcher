@@ -20,7 +20,7 @@ class QtQmakeWatcherMainDialog : public QtHideAndShowDialog
   Q_OBJECT //!OCLINT
 
 public:
-  explicit QtQmakeWatcherMainDialog(QWidget *parent = 0);
+  explicit QtQmakeWatcherMainDialog(QWidget *parent = nullptr);
   QtQmakeWatcherMainDialog(const QtQmakeWatcherMainDialog&) = delete;
   QtQmakeWatcherMainDialog& operator=(const QtQmakeWatcherMainDialog&) = delete;
   ~QtQmakeWatcherMainDialog() noexcept;
@@ -30,7 +30,7 @@ private:
 
 
 private slots:
-  void OnQmake() noexcept;
+  void OnQmake();
 };
 
 } //~namespace ribi
