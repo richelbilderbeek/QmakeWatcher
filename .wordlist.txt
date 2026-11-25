@@ -1,0 +1,9 @@
+Bilderbeek's
+Codecov
+QmakeWatcher
+Richèl
+codecov
+io
+makefile
+makefiles
+qmake
